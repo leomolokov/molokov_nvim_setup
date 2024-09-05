@@ -41,5 +41,28 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use ('mfussenegger/nvim-dap')
+  use('numirias/semshi')
+
+  use {
+      'rmagatti/goto-preview',
+      config = function()
+          require('goto-preview')
+      end
+  }
+
+  --use {"nvim-neotest/nvim-nio"}
+  --use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  --use 'theHamsta/nvim-dap-virtual-text'
+  --use {'mfussenegger/nvim-dap-python'}
+  --require('dapui').setup()
+  --require("dap-python").setup("/path/to/venv/bin/python")
+  --require('dap-python').setup()
+
+  --use {
+  --    "ThePrimeagen/refactoring.nvim",
+  --    requires = {
+  --        {"nvim-lua/plenary.nvim"},
+  --        {"nvim-treesitter/nvim-treesitter"}
+  --    }
+  --}
 end)
